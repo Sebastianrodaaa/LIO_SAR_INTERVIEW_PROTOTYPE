@@ -1,0 +1,73 @@
+{
+  "category": "design-tools",
+  "primary_vendor_id": "vnd-figma",
+  "primary_vendor_name": "Figma",
+  "primary_tier": "Enterprise",
+  "primary_annual_usd": 15000.0,
+  "alternative_vendor_id": "vnd-adobe",
+  "alternative_vendor_name": "Adobe",
+  "continuity_exemption": true,
+  "scores": [
+    {
+      "vendor_id": "vnd-figma",
+      "name": "Figma",
+      "compliance_score": 94,
+      "recommended_tier": "Enterprise",
+      "annual_usd": 15000.0,
+      "soc2": true,
+      "preferred": true,
+      "incumbent": true,
+      "eligible": true,
+      "rationale": "Incumbent design system of record. Enterprise unlocks SSO + SCIM + branched libraries."
+    },
+    {
+      "vendor_id": "vnd-adobe",
+      "name": "Adobe",
+      "compliance_score": 91,
+      "recommended_tier": "Creative Cloud Enterprise",
+      "annual_usd": 42000.0,
+      "soc2": true,
+      "preferred": false,
+      "incumbent": false,
+      "eligible": true,
+      "rationale": "Broader suite (Ps/Ai/Xd). Weak product-design collaboration vs Figma. Overlapping spend risk."
+    },
+    {
+      "vendor_id": "vnd-miro",
+      "name": "Miro",
+      "compliance_score": 87,
+      "recommended_tier": "Enterprise",
+      "annual_usd": 19200.0,
+      "soc2": true,
+      "preferred": false,
+      "incumbent": false,
+      "eligible": true,
+      "rationale": "Workshop/whiteboard competitor to FigJam. Does not replace Figma Dev Mode."
+    },
+    {
+      "vendor_id": "vnd-sketch",
+      "name": "Sketch",
+      "compliance_score": 78,
+      "recommended_tier": "Enterprise",
+      "annual_usd": 9600.0,
+      "soc2": true,
+      "preferred": false,
+      "incumbent": false,
+      "eligible": true,
+      "rationale": "macOS-only editor. Cheaper, but collaboration and FigJam-class workshops are weaker."
+    },
+    {
+      "vendor_id": "vnd-penpot",
+      "name": "Penpot",
+      "compliance_score": 61,
+      "recommended_tier": "Enterprise self-host",
+      "annual_usd": 7200.0,
+      "soc2": false,
+      "preferred": false,
+      "incumbent": false,
+      "eligible": false,
+      "rationale": "Open-source alternative. Fails SOC2 gate for production design-system hosting."
+    }
+  ],
+  "summary": "Figma is the recommended path. Adobe is the documented alternative."
+}

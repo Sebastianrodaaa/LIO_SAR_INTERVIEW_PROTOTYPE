@@ -1,0 +1,40 @@
+{
+  "risk_level": "low",
+  "findings": [
+    {
+      "policy_id": "pol-soc2",
+      "title": "Vendor SOC 2 Type II requirement",
+      "applies": true,
+      "requirement": "Vendor must hold SOC 2 Type II",
+      "status": "condition"
+    },
+    {
+      "policy_id": "pol-ooo-routing",
+      "title": "Out-of-office approval skip",
+      "applies": true,
+      "requirement": "Skip OOO approvers; do not wait",
+      "status": "pass"
+    },
+    {
+      "policy_id": "pol-sso",
+      "title": "SSO / SCIM for tools over 25 seats",
+      "applies": true,
+      "requirement": "SSO + SCIM against Okta",
+      "status": "condition"
+    },
+    {
+      "policy_id": "pol-preferred-vendor",
+      "title": "Preferred vendor continuity",
+      "applies": true,
+      "requirement": "Preferred incumbent gets first look",
+      "status": "pass"
+    }
+  ],
+  "required_reviews": [],
+  "blockers": [],
+  "conditions": [
+    "Selected vendor must be SOC 2 Type II (preferred list is pre-cleared).",
+    "Tier must include SAML/OIDC + SCIM 2.0."
+  ],
+  "summary": "Committed value $4,900 stays under the $10k software-spend policy, so Legal/IT security sign-off is not forced by amount. SSO/SCIM applies because seat count is 120."
+}

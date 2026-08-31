@@ -1,0 +1,23 @@
+{
+  "request_id": "PR-2026-1350",
+  "requester_id": "emp-alex-rivera",
+  "requester_name": "Alex Rivera",
+  "requester_role": "Junior Software Engineer",
+  "department": "Engineering",
+  "manager_id": "emp-jordan-hale",
+  "manager_name": "Jordan Hale",
+  "manager_out_of_office": true,
+  "requester_threshold_usd": 500,
+  "item": "Figma Enterprise",
+  "vendor_hint": "Figma",
+  "category": "design-tools",
+  "amount_usd": 4900.0,
+  "seats": 120,
+  "urgency": "high",
+  "business_justification": "What if that same request were $4,900?",
+  "exceeds_requester_threshold": true,
+  "notes": [
+    "Requester cannot self-approve \u2014 routing will be computed in stage 05.",
+    "Manager OOO status is recorded here; skip logic is applied later so this stage stays single-purpose."
+  ]
+}

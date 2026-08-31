@@ -1,0 +1,567 @@
+[
+  {
+    "id": "vnd-figma",
+    "name": "Figma",
+    "category": "design-tools",
+    "website": "https://www.figma.com",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 94,
+    "preferred": true,
+    "incumbent": true,
+    "existing_contract": "FIG-ENT-2025",
+    "sla": "99.9% monthly uptime; P1 response 1h",
+    "renewal": "2026-11-01",
+    "pricing_tiers": [
+      {
+        "name": "Professional",
+        "seats": 40,
+        "annual_usd": 3600
+      },
+      {
+        "name": "Organization",
+        "seats": 80,
+        "annual_usd": 8400
+      },
+      {
+        "name": "Enterprise",
+        "seats": 120,
+        "annual_usd": 15000
+      }
+    ],
+    "notes": "Incumbent design system of record. Enterprise unlocks SSO + SCIM + branched libraries."
+  },
+  {
+    "id": "vnd-adobe",
+    "name": "Adobe",
+    "category": "design-tools",
+    "website": "https://www.adobe.com",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 91,
+    "preferred": false,
+    "incumbent": false,
+    "existing_contract": null,
+    "sla": "99.9% uptime; P1 response 2h",
+    "renewal": null,
+    "pricing_tiers": [
+      {
+        "name": "Creative Cloud Teams",
+        "seats": 40,
+        "annual_usd": 23980
+      },
+      {
+        "name": "Creative Cloud Enterprise",
+        "seats": 120,
+        "annual_usd": 42000
+      }
+    ],
+    "notes": "Broader suite (Ps/Ai/Xd). Weak product-design collaboration vs Figma. Overlapping spend risk."
+  },
+  {
+    "id": "vnd-sketch",
+    "name": "Sketch",
+    "category": "design-tools",
+    "website": "https://www.sketch.com",
+    "soc2": true,
+    "iso27001": false,
+    "gdpr_dpa": true,
+    "compliance_score": 78,
+    "preferred": false,
+    "incumbent": false,
+    "existing_contract": null,
+    "sla": "99.5% uptime; P1 response 4h",
+    "renewal": null,
+    "pricing_tiers": [
+      {
+        "name": "Mac + Cloud",
+        "seats": 40,
+        "annual_usd": 4800
+      },
+      {
+        "name": "Enterprise",
+        "seats": 120,
+        "annual_usd": 9600
+      }
+    ],
+    "notes": "macOS-only editor. Cheaper, but collaboration and FigJam-class workshops are weaker."
+  },
+  {
+    "id": "vnd-penpot",
+    "name": "Penpot",
+    "category": "design-tools",
+    "website": "https://penpot.app",
+    "soc2": false,
+    "iso27001": false,
+    "gdpr_dpa": true,
+    "compliance_score": 61,
+    "preferred": false,
+    "incumbent": false,
+    "existing_contract": null,
+    "sla": "Best-effort community SLA; enterprise self-host optional",
+    "renewal": null,
+    "pricing_tiers": [
+      {
+        "name": "Cloud Team",
+        "seats": 40,
+        "annual_usd": 1680
+      },
+      {
+        "name": "Enterprise self-host",
+        "seats": 120,
+        "annual_usd": 7200
+      }
+    ],
+    "notes": "Open-source alternative. Fails SOC2 gate for production design-system hosting."
+  },
+  {
+    "id": "vnd-aws",
+    "name": "Amazon Web Services",
+    "category": "cloud-infrastructure",
+    "website": "https://aws.amazon.com",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 97,
+    "preferred": true,
+    "incumbent": true,
+    "existing_contract": "AWS-EDP-2024",
+    "sla": "Per-service SLA; enterprise TAM included",
+    "renewal": "2027-01-15",
+    "pricing_tiers": [
+      {
+        "name": "Pay-as-you-go",
+        "seats": 0,
+        "annual_usd": 420000
+      },
+      {
+        "name": "EDP commit",
+        "seats": 0,
+        "annual_usd": 380000
+      }
+    ],
+    "notes": "Primary cloud. Not in scope for this software-license request."
+  },
+  {
+    "id": "vnd-datadog",
+    "name": "Datadog",
+    "category": "observability",
+    "website": "https://www.datadoghq.com",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 93,
+    "preferred": true,
+    "incumbent": true,
+    "existing_contract": "DD-PRO-2025",
+    "sla": "99.99% uptime; P1 15m",
+    "renewal": "2026-08-01",
+    "pricing_tiers": [
+      {
+        "name": "Pro",
+        "seats": 25,
+        "annual_usd": 48000
+      },
+      {
+        "name": "Enterprise",
+        "seats": 40,
+        "annual_usd": 86000
+      }
+    ],
+    "notes": "Incumbent APM. Unrelated to design-tool sourcing."
+  },
+  {
+    "id": "vnd-slack",
+    "name": "Slack",
+    "category": "collaboration",
+    "website": "https://slack.com",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 92,
+    "preferred": true,
+    "incumbent": true,
+    "existing_contract": "SLACK-ENT-2025",
+    "sla": "99.99% uptime",
+    "renewal": "2026-12-01",
+    "pricing_tiers": [
+      {
+        "name": "Business+",
+        "seats": 400,
+        "annual_usd": 60000
+      },
+      {
+        "name": "Enterprise Grid",
+        "seats": 400,
+        "annual_usd": 96000
+      }
+    ],
+    "notes": "Company-wide comms. Not a Figma substitute."
+  },
+  {
+    "id": "vnd-notion",
+    "name": "Notion",
+    "category": "collaboration",
+    "website": "https://www.notion.so",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 88,
+    "preferred": true,
+    "incumbent": true,
+    "existing_contract": "NOTION-ENT-2025",
+    "sla": "99.9% uptime; P1 1h",
+    "renewal": "2026-10-01",
+    "pricing_tiers": [
+      {
+        "name": "Business",
+        "seats": 400,
+        "annual_usd": 38400
+      },
+      {
+        "name": "Enterprise",
+        "seats": 400,
+        "annual_usd": 72000
+      }
+    ],
+    "notes": "Wiki of record."
+  },
+  {
+    "id": "vnd-atlassian",
+    "name": "Atlassian (Jira / Confluence)",
+    "category": "collaboration",
+    "website": "https://www.atlassian.com",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 90,
+    "preferred": true,
+    "incumbent": true,
+    "existing_contract": "ATL-CLOUD-2024",
+    "sla": "99.9% Premium uptime",
+    "renewal": "2026-09-15",
+    "pricing_tiers": [
+      {
+        "name": "Premium",
+        "seats": 250,
+        "annual_usd": 42000
+      },
+      {
+        "name": "Enterprise",
+        "seats": 250,
+        "annual_usd": 78000
+      }
+    ],
+    "notes": "Issue tracker of record."
+  },
+  {
+    "id": "vnd-github",
+    "name": "GitHub",
+    "category": "developer-tools",
+    "website": "https://github.com",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 96,
+    "preferred": true,
+    "incumbent": true,
+    "existing_contract": "GH-EMU-2025",
+    "sla": "99.95% Actions + Git",
+    "renewal": "2027-03-01",
+    "pricing_tiers": [
+      {
+        "name": "Team",
+        "seats": 180,
+        "annual_usd": 8640
+      },
+      {
+        "name": "Enterprise",
+        "seats": 180,
+        "annual_usd": 37800
+      }
+    ],
+    "notes": "Source of truth for code."
+  },
+  {
+    "id": "vnd-okta",
+    "name": "Okta",
+    "category": "identity",
+    "website": "https://www.okta.com",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 95,
+    "preferred": true,
+    "incumbent": true,
+    "existing_contract": "OKTA-SSO-2025",
+    "sla": "99.99% uptime",
+    "renewal": "2026-06-01",
+    "pricing_tiers": [
+      {
+        "name": "SSO + MFA",
+        "seats": 400,
+        "annual_usd": 48000
+      },
+      {
+        "name": "Workforce Identity",
+        "seats": 400,
+        "annual_usd": 92000
+      }
+    ],
+    "notes": "IdP. Figma Enterprise is required for SCIM against Okta."
+  },
+  {
+    "id": "vnd-snowflake",
+    "name": "Snowflake",
+    "category": "data-platform",
+    "website": "https://www.snowflake.com",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 94,
+    "preferred": true,
+    "incumbent": true,
+    "existing_contract": "SNOW-ENT-2025",
+    "sla": "99.9% uptime",
+    "renewal": "2026-12-15",
+    "pricing_tiers": [
+      {
+        "name": "Standard",
+        "seats": 20,
+        "annual_usd": 85000
+      },
+      {
+        "name": "Enterprise",
+        "seats": 40,
+        "annual_usd": 140000
+      }
+    ],
+    "notes": "Warehouse. Out of scope."
+  },
+  {
+    "id": "vnd-linear",
+    "name": "Linear",
+    "category": "developer-tools",
+    "website": "https://linear.app",
+    "soc2": true,
+    "iso27001": false,
+    "gdpr_dpa": true,
+    "compliance_score": 84,
+    "preferred": false,
+    "incumbent": false,
+    "existing_contract": null,
+    "sla": "99.9% uptime",
+    "renewal": null,
+    "pricing_tiers": [
+      {
+        "name": "Business",
+        "seats": 80,
+        "annual_usd": 9600
+      },
+      {
+        "name": "Enterprise",
+        "seats": 80,
+        "annual_usd": 16800
+      }
+    ],
+    "notes": "Evaluated as Jira alternative; not selected."
+  },
+  {
+    "id": "vnd-1password",
+    "name": "1Password",
+    "category": "identity",
+    "website": "https://1password.com",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 93,
+    "preferred": true,
+    "incumbent": true,
+    "existing_contract": "1P-BIZ-2025",
+    "sla": "99.99% uptime",
+    "renewal": "2026-04-01",
+    "pricing_tiers": [
+      {
+        "name": "Business",
+        "seats": 400,
+        "annual_usd": 38400
+      },
+      {
+        "name": "Enterprise",
+        "seats": 400,
+        "annual_usd": 52800
+      }
+    ],
+    "notes": "Secrets manager for teams."
+  },
+  {
+    "id": "vnd-crowdstrike",
+    "name": "CrowdStrike",
+    "category": "security",
+    "website": "https://www.crowdstrike.com",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 96,
+    "preferred": true,
+    "incumbent": true,
+    "existing_contract": "CS-FALCON-2025",
+    "sla": "99.9% cloud; 1h P1",
+    "renewal": "2026-07-01",
+    "pricing_tiers": [
+      {
+        "name": "Falcon Go",
+        "seats": 400,
+        "annual_usd": 36000
+      },
+      {
+        "name": "Falcon Complete",
+        "seats": 400,
+        "annual_usd": 120000
+      }
+    ],
+    "notes": "EDR of record."
+  },
+  {
+    "id": "vnd-twilio",
+    "name": "Twilio",
+    "category": "communications",
+    "website": "https://www.twilio.com",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 89,
+    "preferred": true,
+    "incumbent": true,
+    "existing_contract": "TW-SMS-2025",
+    "sla": "99.95% programmable messaging",
+    "renewal": "2026-05-01",
+    "pricing_tiers": [
+      {
+        "name": "Usage",
+        "seats": 0,
+        "annual_usd": 28000
+      },
+      {
+        "name": "Enterprise commit",
+        "seats": 0,
+        "annual_usd": 24000
+      }
+    ],
+    "notes": "SMS/voice. Out of scope."
+  },
+  {
+    "id": "vnd-sentry",
+    "name": "Sentry",
+    "category": "observability",
+    "website": "https://sentry.io",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 90,
+    "preferred": true,
+    "incumbent": true,
+    "existing_contract": "SENTRY-BIZ-2025",
+    "sla": "99.9% uptime",
+    "renewal": "2026-09-01",
+    "pricing_tiers": [
+      {
+        "name": "Team",
+        "seats": 30,
+        "annual_usd": 9600
+      },
+      {
+        "name": "Business",
+        "seats": 30,
+        "annual_usd": 24000
+      }
+    ],
+    "notes": "Error tracking."
+  },
+  {
+    "id": "vnd-hashicorp",
+    "name": "HashiCorp",
+    "category": "cloud-infrastructure",
+    "website": "https://www.hashicorp.com",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 92,
+    "preferred": true,
+    "incumbent": true,
+    "existing_contract": "HC-TERRAFORM-2025",
+    "sla": "99.9% Terraform Cloud",
+    "renewal": "2026-11-15",
+    "pricing_tiers": [
+      {
+        "name": "Team",
+        "seats": 20,
+        "annual_usd": 14400
+      },
+      {
+        "name": "Standard",
+        "seats": 40,
+        "annual_usd": 48000
+      }
+    ],
+    "notes": "IaC. Out of scope."
+  },
+  {
+    "id": "vnd-mongodb",
+    "name": "MongoDB",
+    "category": "data-platform",
+    "website": "https://www.mongodb.com",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 91,
+    "preferred": false,
+    "incumbent": false,
+    "existing_contract": null,
+    "sla": "99.95% Atlas",
+    "renewal": null,
+    "pricing_tiers": [
+      {
+        "name": "Dedicated M30",
+        "seats": 0,
+        "annual_usd": 18000
+      },
+      {
+        "name": "Dedicated M50",
+        "seats": 0,
+        "annual_usd": 42000
+      }
+    ],
+    "notes": "Evaluated vs Snowflake for operational JSON; not selected."
+  },
+  {
+    "id": "vnd-miro",
+    "name": "Miro",
+    "category": "design-tools",
+    "website": "https://miro.com",
+    "soc2": true,
+    "iso27001": true,
+    "gdpr_dpa": true,
+    "compliance_score": 87,
+    "preferred": false,
+    "incumbent": false,
+    "existing_contract": null,
+    "sla": "99.9% uptime",
+    "renewal": null,
+    "pricing_tiers": [
+      {
+        "name": "Business",
+        "seats": 80,
+        "annual_usd": 12960
+      },
+      {
+        "name": "Enterprise",
+        "seats": 120,
+        "annual_usd": 19200
+      }
+    ],
+    "notes": "Workshop/whiteboard competitor to FigJam. Does not replace Figma Dev Mode."
+  }
+]

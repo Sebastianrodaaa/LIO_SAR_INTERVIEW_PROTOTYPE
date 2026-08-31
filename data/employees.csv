@@ -1,0 +1,23 @@
+id,name,role,department,manager_id,out_of_office,ooo_until,approval_threshold_usd,email,location
+emp-helena-voss,Helena Voss,Chief Executive Officer,Executive,,False,,500000,helena.voss@northstar.example,San Francisco
+emp-olivia-hart,Olivia Hart,Chief Financial Officer,Finance,emp-helena-voss,False,,100000,olivia.hart@northstar.example,New York
+emp-adrian-cole,Adrian Cole,General Counsel,Legal,emp-helena-voss,False,,75000,adrian.cole@northstar.example,San Francisco
+emp-marcus-webb,Marcus Webb,Chief Information Security Officer,IT Security,emp-helena-voss,False,,50000,marcus.webb@northstar.example,Austin
+emp-maya-chen,Maya Chen,VP of Engineering,Engineering,emp-helena-voss,False,,50000,maya.chen@northstar.example,San Francisco
+emp-dana-foster,Dana Foster,VP of Product,Product,emp-helena-voss,False,,50000,dana.foster@northstar.example,San Francisco
+emp-grace-okada,Grace Okada,VP of People,People,emp-helena-voss,False,,40000,grace.okada@northstar.example,Seattle
+emp-harper-quinn,Harper Quinn,Head of Design,Design,emp-dana-foster,False,,25000,harper.quinn@northstar.example,Los Angeles
+emp-chris-lang,Chris Lang,Director of Platform,Engineering,emp-maya-chen,False,,15000,chris.lang@northstar.example,San Francisco
+emp-jordan-hale,Jordan Hale,Engineering Manager,Engineering,emp-maya-chen,True,2026-09-07,5000,jordan.hale@northstar.example,San Francisco
+emp-elena-vasquez,Elena Vasquez,"Engineering Manager, Infrastructure",Engineering,emp-chris-lang,False,,5000,elena.vasquez@northstar.example,Austin
+emp-nina-patel,Nina Patel,IT Security Manager,IT Security,emp-marcus-webb,False,,10000,nina.patel@northstar.example,Austin
+emp-sophie-laurent,Sophie Laurent,Senior Counsel,Legal,emp-adrian-cole,False,,15000,sophie.laurent@northstar.example,New York
+emp-ben-shah,Ben Shah,Controller,Finance,emp-olivia-hart,False,,10000,ben.shah@northstar.example,New York
+emp-mei-lin,Mei Lin,Procurement Lead,Finance,emp-ben-shah,False,,7500,mei.lin@northstar.example,New York
+emp-priya-nair,Priya Nair,Staff Software Engineer,Engineering,emp-jordan-hale,False,,2000,priya.nair@northstar.example,San Francisco
+emp-sam-okonkwo,Sam Okonkwo,Senior Software Engineer,Engineering,emp-jordan-hale,False,,1000,sam.okonkwo@northstar.example,San Francisco
+emp-alex-rivera,Alex Rivera,Junior Software Engineer,Engineering,emp-jordan-hale,False,,500,alex.rivera@northstar.example,San Francisco
+emp-noah-kim,Noah Kim,Junior Software Engineer,Engineering,emp-elena-vasquez,False,,500,noah.kim@northstar.example,Austin
+emp-riley-brooks,Riley Brooks,Product Manager,Product,emp-dana-foster,False,,2000,riley.brooks@northstar.example,San Francisco
+emp-jules-martin,Jules Martin,Product Designer,Design,emp-harper-quinn,False,,1000,jules.martin@northstar.example,Los Angeles
+emp-tom-becker,Tom Becker,IT Operations Specialist,IT Security,emp-nina-patel,False,,3000,tom.becker@northstar.example,Austin

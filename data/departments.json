@@ -1,0 +1,42 @@
+[
+  {
+    "id": "dept-executive",
+    "name": "Executive",
+    "cost_center": "CC-100"
+  },
+  {
+    "id": "dept-engineering",
+    "name": "Engineering",
+    "cost_center": "CC-210"
+  },
+  {
+    "id": "dept-product",
+    "name": "Product",
+    "cost_center": "CC-220"
+  },
+  {
+    "id": "dept-design",
+    "name": "Design",
+    "cost_center": "CC-230"
+  },
+  {
+    "id": "dept-finance",
+    "name": "Finance",
+    "cost_center": "CC-310"
+  },
+  {
+    "id": "dept-legal",
+    "name": "Legal",
+    "cost_center": "CC-320"
+  },
+  {
+    "id": "dept-itsec",
+    "name": "IT Security",
+    "cost_center": "CC-410"
+  },
+  {
+    "id": "dept-people",
+    "name": "People",
+    "cost_center": "CC-510"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "company": "Northstar Digital",
+  "scenario": {
+    "requester_id": "emp-alex-rivera",
+    "vendor_id": "vnd-figma",
+    "item": "Figma Enterprise",
+    "amount_usd": 15000,
+    "seats": 120,
+    "justification": "Design and Engineering share one component library. Organization-tier lacks SCIM; POL-SEC-011 requires SSO/SCIM above 25 seats. Enterprise is the lowest compliant tier."
+  }
+}

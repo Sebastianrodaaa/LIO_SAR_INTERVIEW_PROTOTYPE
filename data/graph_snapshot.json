@@ -1,0 +1,311 @@
+{
+  "backend": "networkx",
+  "node_count": 66,
+  "edge_count": 86,
+  "cockpit": {
+    "backend": "networkx",
+    "nodes": [
+      {
+        "id": "dept-engineering",
+        "kind": "Department",
+        "label": "Engineering",
+        "subtitle": "CC-210",
+        "ooo": false,
+        "x": 120,
+        "y": 230,
+        "active": false
+      },
+      {
+        "id": "dept-legal",
+        "kind": "Department",
+        "label": "Legal",
+        "subtitle": "CC-320",
+        "ooo": false,
+        "x": 120,
+        "y": 420,
+        "active": false
+      },
+      {
+        "id": "dept-itsec",
+        "kind": "Department",
+        "label": "IT Security",
+        "subtitle": "CC-410",
+        "ooo": false,
+        "x": 120,
+        "y": 500,
+        "active": false
+      },
+      {
+        "id": "emp-helena-voss",
+        "kind": "Employee",
+        "label": "Helena Voss",
+        "subtitle": "Chief Executive Officer \u00b7 $500,000",
+        "ooo": false,
+        "x": 480,
+        "y": 36,
+        "active": false
+      },
+      {
+        "id": "emp-maya-chen",
+        "kind": "Employee",
+        "label": "Maya Chen",
+        "subtitle": "VP of Engineering \u00b7 $50,000",
+        "ooo": false,
+        "x": 300,
+        "y": 130,
+        "active": true
+      },
+      {
+        "id": "emp-dana-foster",
+        "kind": "Employee",
+        "label": "Dana Foster",
+        "subtitle": "VP of Product \u00b7 $50,000",
+        "ooo": false,
+        "x": 660,
+        "y": 130,
+        "active": false
+      },
+      {
+        "id": "emp-jordan-hale",
+        "kind": "Employee",
+        "label": "Jordan Hale",
+        "subtitle": "Engineering Manager \u00b7 $5,000 \u00b7 OOO",
+        "ooo": true,
+        "x": 300,
+        "y": 230,
+        "active": true
+      },
+      {
+        "id": "emp-alex-rivera",
+        "kind": "Employee",
+        "label": "Alex Rivera",
+        "subtitle": "Junior Software Engineer \u00b7 $500",
+        "ooo": false,
+        "x": 300,
+        "y": 340,
+        "active": true
+      },
+      {
+        "id": "vnd-figma",
+        "kind": "Vendor",
+        "label": "Figma",
+        "subtitle": "design-tools \u00b7 score 94",
+        "ooo": false,
+        "x": 520,
+        "y": 430,
+        "active": true
+      },
+      {
+        "id": "vnd-adobe",
+        "kind": "Vendor",
+        "label": "Adobe",
+        "subtitle": "design-tools \u00b7 score 91",
+        "ooo": false,
+        "x": 640,
+        "y": 500,
+        "active": false
+      },
+      {
+        "id": "vnd-sketch",
+        "kind": "Vendor",
+        "label": "Sketch",
+        "subtitle": "design-tools \u00b7 score 78",
+        "ooo": false,
+        "x": 400,
+        "y": 500,
+        "active": false
+      },
+      {
+        "id": "vnd-penpot",
+        "kind": "Vendor",
+        "label": "Penpot",
+        "subtitle": "design-tools \u00b7 score 61",
+        "ooo": false,
+        "x": 520,
+        "y": 540,
+        "active": false
+      },
+      {
+        "id": "vnd-miro",
+        "kind": "Vendor",
+        "label": "Miro",
+        "subtitle": "design-tools \u00b7 score 87",
+        "ooo": false,
+        "x": 640,
+        "y": 430,
+        "active": false
+      },
+      {
+        "id": "pol-spend-10k",
+        "kind": "Policy",
+        "label": "Software spend over $10,000",
+        "subtitle": "pol-spend-10k",
+        "ooo": false,
+        "x": 820,
+        "y": 300,
+        "active": false
+      },
+      {
+        "id": "pol-soc2",
+        "kind": "Policy",
+        "label": "Vendor SOC 2 Type II requirement",
+        "subtitle": "pol-soc2",
+        "ooo": false,
+        "x": 820,
+        "y": 380,
+        "active": false
+      },
+      {
+        "id": "pol-ooo-routing",
+        "kind": "Policy",
+        "label": "Out-of-office approval skip",
+        "subtitle": "pol-ooo-routing",
+        "ooo": false,
+        "x": 820,
+        "y": 220,
+        "active": false
+      },
+      {
+        "id": "pol-sso",
+        "kind": "Policy",
+        "label": "SSO / SCIM for tools over 25 seats",
+        "subtitle": "pol-sso",
+        "ooo": false,
+        "x": 820,
+        "y": 460,
+        "active": false
+      },
+      {
+        "id": "pol-legal-dpa",
+        "kind": "Policy",
+        "label": "Data processing addendum",
+        "subtitle": "pol-legal-dpa",
+        "ooo": false,
+        "x": 820,
+        "y": 540,
+        "active": false
+      }
+    ],
+    "edges": [
+      {
+        "source": "emp-maya-chen",
+        "target": "dept-engineering",
+        "kind": "BELONGS_TO",
+        "active": false
+      },
+      {
+        "source": "emp-maya-chen",
+        "target": "emp-helena-voss",
+        "kind": "REPORTS_TO",
+        "active": false
+      },
+      {
+        "source": "emp-dana-foster",
+        "target": "emp-helena-voss",
+        "kind": "REPORTS_TO",
+        "active": false
+      },
+      {
+        "source": "emp-jordan-hale",
+        "target": "dept-engineering",
+        "kind": "BELONGS_TO",
+        "active": false
+      },
+      {
+        "source": "emp-jordan-hale",
+        "target": "emp-maya-chen",
+        "kind": "REPORTS_TO",
+        "active": true
+      },
+      {
+        "source": "emp-alex-rivera",
+        "target": "dept-engineering",
+        "kind": "BELONGS_TO",
+        "active": false
+      },
+      {
+        "source": "emp-alex-rivera",
+        "target": "emp-jordan-hale",
+        "kind": "REPORTS_TO",
+        "active": true
+      },
+      {
+        "source": "pol-spend-10k",
+        "target": "dept-engineering",
+        "kind": "GOVERNS",
+        "active": false
+      },
+      {
+        "source": "pol-soc2",
+        "target": "dept-itsec",
+        "kind": "GOVERNS",
+        "active": false
+      },
+      {
+        "source": "pol-soc2",
+        "target": "dept-engineering",
+        "kind": "GOVERNS",
+        "active": false
+      },
+      {
+        "source": "pol-soc2",
+        "target": "dept-legal",
+        "kind": "GOVERNS",
+        "active": false
+      },
+      {
+        "source": "pol-ooo-routing",
+        "target": "dept-engineering",
+        "kind": "GOVERNS",
+        "active": false
+      },
+      {
+        "source": "pol-ooo-routing",
+        "target": "dept-legal",
+        "kind": "GOVERNS",
+        "active": false
+      },
+      {
+        "source": "pol-ooo-routing",
+        "target": "dept-itsec",
+        "kind": "GOVERNS",
+        "active": false
+      },
+      {
+        "source": "pol-sso",
+        "target": "dept-itsec",
+        "kind": "GOVERNS",
+        "active": false
+      },
+      {
+        "source": "pol-sso",
+        "target": "dept-engineering",
+        "kind": "GOVERNS",
+        "active": false
+      },
+      {
+        "source": "pol-legal-dpa",
+        "target": "dept-legal",
+        "kind": "GOVERNS",
+        "active": false
+      }
+    ],
+    "highlight": [
+      "emp-alex-rivera",
+      "emp-jordan-hale",
+      "emp-maya-chen",
+      "vnd-figma"
+    ]
+  },
+  "scenario": {
+    "company": "Northstar Digital",
+    "scenario": {
+      "requester_id": "emp-alex-rivera",
+      "vendor_id": "vnd-figma",
+      "item": "Figma Enterprise",
+      "amount_usd": 15000,
+      "seats": 120,
+      "justification": "Design and Engineering share one component library. Organization-tier lacks SCIM; POL-SEC-011 requires SSO/SCIM above 25 seats. Enterprise is the lowest compliant tier."
+    }
+  }
+}

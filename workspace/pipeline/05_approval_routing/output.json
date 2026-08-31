@@ -1,0 +1,79 @@
+{
+  "spender_approver_id": "emp-maya-chen",
+  "spender_approver_name": "Maya Chen",
+  "skipped": [
+    "Jordan Hale"
+  ],
+  "hops": [
+    {
+      "employee_id": "emp-alex-rivera",
+      "name": "Alex Rivera",
+      "role": "Junior Software Engineer",
+      "threshold_usd": 500,
+      "out_of_office": false,
+      "action": "requester",
+      "reason": "Opened the request; cannot self-approve."
+    },
+    {
+      "employee_id": "emp-jordan-hale",
+      "name": "Jordan Hale",
+      "role": "Engineering Manager",
+      "threshold_usd": 5000,
+      "out_of_office": true,
+      "action": "skipped_ooo",
+      "reason": "POL-PPL-009 skip \u2014 OOO until 2026-09-07."
+    },
+    {
+      "employee_id": "emp-maya-chen",
+      "name": "Maya Chen",
+      "role": "VP of Engineering",
+      "threshold_usd": 50000,
+      "out_of_office": false,
+      "action": "spender_approver",
+      "reason": "First in-office manager with threshold $50,000 \u2265 $4,900."
+    },
+    {
+      "employee_id": "emp-helena-voss",
+      "name": "Helena Voss",
+      "role": "Chief Executive Officer",
+      "threshold_usd": 500000,
+      "out_of_office": false,
+      "action": "informed",
+      "reason": "On the reporting path; not the covering approver."
+    },
+    {
+      "employee_id": "functional",
+      "name": "Nina Patel",
+      "role": "IT SecReview",
+      "threshold_usd": 0,
+      "out_of_office": false,
+      "action": "functional_reviewer",
+      "reason": "Required by POL-FIN-014 / POL-LGL-004."
+    },
+    {
+      "employee_id": "functional",
+      "name": "Sophie Laurent",
+      "role": "Legal DPA",
+      "threshold_usd": 0,
+      "out_of_office": false,
+      "action": "functional_reviewer",
+      "reason": "Required by POL-FIN-014 / POL-LGL-004."
+    },
+    {
+      "employee_id": "functional",
+      "name": "Mei Lin",
+      "role": "Procurement copy",
+      "threshold_usd": 0,
+      "out_of_office": false,
+      "action": "functional_reviewer",
+      "reason": "Required by POL-FIN-014 / POL-LGL-004."
+    }
+  ],
+  "functional_reviewers": [
+    "Nina Patel \u2014 IT SecReview",
+    "Sophie Laurent \u2014 Legal DPA",
+    "Mei Lin \u2014 Procurement copy"
+  ],
+  "ready_to_route": true,
+  "summary": "$4,900: skipped Jordan Hale. Spender approver is Maya Chen ($50,000 limit). Nothing is purchased until a person signs."
+}

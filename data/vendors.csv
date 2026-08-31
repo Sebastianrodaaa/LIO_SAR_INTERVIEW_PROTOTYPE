@@ -1,0 +1,21 @@
+id,name,category,compliance_score,preferred,incumbent,soc2,sla
+vnd-figma,Figma,design-tools,94,True,True,True,99.9% monthly uptime; P1 response 1h
+vnd-adobe,Adobe,design-tools,91,False,False,True,99.9% uptime; P1 response 2h
+vnd-sketch,Sketch,design-tools,78,False,False,True,99.5% uptime; P1 response 4h
+vnd-penpot,Penpot,design-tools,61,False,False,False,Best-effort community SLA; enterprise self-host optional
+vnd-aws,Amazon Web Services,cloud-infrastructure,97,True,True,True,Per-service SLA; enterprise TAM included
+vnd-datadog,Datadog,observability,93,True,True,True,99.99% uptime; P1 15m
+vnd-slack,Slack,collaboration,92,True,True,True,99.99% uptime
+vnd-notion,Notion,collaboration,88,True,True,True,99.9% uptime; P1 1h
+vnd-atlassian,Atlassian (Jira / Confluence),collaboration,90,True,True,True,99.9% Premium uptime
+vnd-github,GitHub,developer-tools,96,True,True,True,99.95% Actions + Git
+vnd-okta,Okta,identity,95,True,True,True,99.99% uptime
+vnd-snowflake,Snowflake,data-platform,94,True,True,True,99.9% uptime
+vnd-linear,Linear,developer-tools,84,False,False,True,99.9% uptime
+vnd-1password,1Password,identity,93,True,True,True,99.99% uptime
+vnd-crowdstrike,CrowdStrike,security,96,True,True,True,99.9% cloud; 1h P1
+vnd-twilio,Twilio,communications,89,True,True,True,99.95% programmable messaging
+vnd-sentry,Sentry,observability,90,True,True,True,99.9% uptime
+vnd-hashicorp,HashiCorp,cloud-infrastructure,92,True,True,True,99.9% Terraform Cloud
+vnd-mongodb,MongoDB,data-platform,91,False,False,True,99.95% Atlas
+vnd-miro,Miro,design-tools,87,False,False,True,99.9% uptime
