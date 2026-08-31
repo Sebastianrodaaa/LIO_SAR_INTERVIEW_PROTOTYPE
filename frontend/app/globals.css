@@ -41,8 +41,15 @@ body {
     var(--bg);
 }
 
-button {
-  font-family: inherit;
+.drag-region,
+.pywebview-drag-region {
+  -webkit-app-region: drag;
+  app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+  app-region: no-drag;
 }
 
 button:active {

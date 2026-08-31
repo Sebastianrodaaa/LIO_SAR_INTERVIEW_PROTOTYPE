@@ -6,10 +6,10 @@ It exists to make a concrete claim: **single-agent sequential reasoning beats a 
 
 - Method: [Interpretable Context Methodology (ICM)](https://arxiv.org/abs/2603.16021)
 - Flow: [Anthropic — Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) (a *workflow*, not an autonomous swarm)
-- UI: chat + live company graph (people, rules, vendors)
+- UI: native desktop window (chat + live company graph)
 - Default LLM: offline mock grounded in the fake company graph (no API key)
 
-Live cockpit: [http://127.0.0.1:3000](http://127.0.0.1:3000) · API: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+Launch with `python3 desktop.py` (or `make app`). No browser.
 
 ---
 
@@ -38,7 +38,7 @@ Typical stage budget here is a few thousand tokens, not a 40k+ monolith. That is
 
 **Northstar** is a fake company. Junior SWE **Alex Rivera** (own limit $500) wants software. Manager **Jordan Hale** ($5,000) is out of office. The graph walks `REPORTS_TO` and stops at the first in-office person whose limit covers the amount — **Maya Chen** ($50k) for $15,000, **Helena Voss** ($500k) for $60,000.
 
-The cockpit is a chat on the left and a map of people, rules, and vendors on the right. Click a node to inspect it. Ask about it. Change the amount or the vendor in chat; the walk, the policies, and the written briefs change.
+The cockpit is a **desktop window**: chat on the left, map of people, rules, and vendors on the right. Click a node to inspect it. Ask about it. Change the amount or the vendor in chat; the walk, the policies, and the written briefs change.
 
 Try:
 
@@ -51,8 +51,8 @@ Try:
 ## Requirements
 
 - **Python 3.11+**
-- **Node.js 20+** (for the Next.js cockpit)
-- macOS or Linux. No Docker required.
+- **Node.js 20+** (once, to build the cockpit into the desktop window)
+- macOS (WKWebView) is the primary target. Linux needs WebKitGTK; Windows uses Edge WebView2.
 
 Neo4j and an OpenAI/Anthropic key are **optional**. The default path is fully offline: NetworkX in memory + a mock LLM that still reads the same GraphRAG slices.
 
@@ -66,26 +66,30 @@ cd LIO_SAR_INTERVIEW_PROTOTYPE
 
 python3 -m pip install -r requirements.txt
 python3 bootstrap.py          # mock company data + ICM folders + graph seed
-
-# terminal 1 — API
-make backend                  # http://127.0.0.1:8000
-
-# terminal 2 — cockpit
-cd frontend && npm install && npm run dev
-# http://127.0.0.1:3000
+cd frontend && npm install && npm run build && cd ..
+python3 desktop.py            # native window; Ctrl+C or the red traffic light to quit
 ```
+
+Or one shot after dependencies are installed:
+
+```bash
+make app
+```
+
+`desktop.py` starts the orchestrator on a local port and opens a frameless OS window. It is not a browser tab. The red / yellow / green lights close, minimize, and zoom the window.
 
 `bootstrap.py` generates `data/` (employees, vendors, policies) and scaffolds `workspace/pipeline/01_intake` … `05_approval_routing`. Re-run it anytime you want a clean factory.
 
-Equivalent without Make:
-
-```bash
-python3 -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload
-```
-
-Open the UI, click a suggestion chip (or type a purchase). Watch one agent switch hats: load `CONTEXT.md`, query the graph, type reasoning, write `output.md`, pass the file to the next folder.
+Click a suggestion chip (or type a purchase). Watch one agent switch hats: load `CONTEXT.md`, query the graph, type reasoning, write `output.md`, pass the file to the next folder.
 
 Pause after each hat with the checkbox if you want to read the brief before the next contract loads.
+
+### Rebuild the UI after frontend changes
+
+```bash
+cd frontend && npm run build && cd ..
+python3 desktop.py
+```
 
 ### Tests
 
@@ -144,7 +148,8 @@ Each hat’s prompt never includes the other four contracts. The next hat sees a
 
 ```
 bootstrap.py              data → folders → graph
-main.py                   FastAPI + SSE
+desktop.py                native window (pywebview)
+main.py                   local API + SSE + exported UI
 engine/orchestrator.py    the loop (this is the architecture)
 engine/graphrag.py        stage-scoped retrieval
 engine/live_thoughts.py   reasoning text from this request’s graph slice
@@ -152,7 +157,7 @@ engine/schemas.py         Pydantic contracts per hat
 engine/mock_completions.py  offline, graph-grounded structured output
 workspace/pipeline/       01–05  CONTEXT.md + output.md
 data/                     Northstar employees, vendors, policies
-frontend/                 chat + interactive graph
+frontend/                 cockpit (exported into the desktop window)
 tests/                    cycle, intent, amount-sensitive routing
 ```
 

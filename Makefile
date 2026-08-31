@@ -1,4 +1,4 @@
-.PHONY: bootstrap backend frontend demo test
+.PHONY: bootstrap backend frontend demo test ui app
 
 bootstrap:
 	python3 bootstrap.py
@@ -9,9 +9,13 @@ backend:
 frontend:
 	cd frontend && npm run dev
 
-demo: bootstrap
-	@echo "Start backend: make backend"
-	@echo "Start frontend: make frontend"
+ui:
+	cd frontend && npm install && npm run build
+
+app: bootstrap ui
+	python3 desktop.py
+
+demo: app
 
 test:
 	PYTHONPATH=. python3 tests/test_cycle.py

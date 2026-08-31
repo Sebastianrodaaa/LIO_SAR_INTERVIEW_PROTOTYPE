@@ -13,7 +13,10 @@
         "ooo": false,
         "x": 120,
         "y": 230,
-        "active": false
+        "active": false,
+        "facts": {
+          "cost_center": "CC-210"
+        }
       },
       {
         "id": "dept-legal",
@@ -23,7 +26,10 @@
         "ooo": false,
         "x": 120,
         "y": 420,
-        "active": false
+        "active": false,
+        "facts": {
+          "cost_center": "CC-320"
+        }
       },
       {
         "id": "dept-itsec",
@@ -33,7 +39,10 @@
         "ooo": false,
         "x": 120,
         "y": 500,
-        "active": false
+        "active": false,
+        "facts": {
+          "cost_center": "CC-410"
+        }
       },
       {
         "id": "emp-helena-voss",
@@ -43,7 +52,15 @@
         "ooo": false,
         "x": 480,
         "y": 36,
-        "active": false
+        "active": false,
+        "facts": {
+          "role": "Chief Executive Officer",
+          "department": "Executive",
+          "threshold_usd": 500000,
+          "ooo_until": null,
+          "email": "helena.voss@northstar.example",
+          "location": "San Francisco"
+        }
       },
       {
         "id": "emp-maya-chen",
@@ -53,7 +70,15 @@
         "ooo": false,
         "x": 300,
         "y": 130,
-        "active": true
+        "active": true,
+        "facts": {
+          "role": "VP of Engineering",
+          "department": "Engineering",
+          "threshold_usd": 50000,
+          "ooo_until": null,
+          "email": "maya.chen@northstar.example",
+          "location": "San Francisco"
+        }
       },
       {
         "id": "emp-dana-foster",
@@ -63,7 +88,15 @@
         "ooo": false,
         "x": 660,
         "y": 130,
-        "active": false
+        "active": false,
+        "facts": {
+          "role": "VP of Product",
+          "department": "Product",
+          "threshold_usd": 50000,
+          "ooo_until": null,
+          "email": "dana.foster@northstar.example",
+          "location": "San Francisco"
+        }
       },
       {
         "id": "emp-jordan-hale",
@@ -73,7 +106,15 @@
         "ooo": true,
         "x": 300,
         "y": 230,
-        "active": true
+        "active": true,
+        "facts": {
+          "role": "Engineering Manager",
+          "department": "Engineering",
+          "threshold_usd": 5000,
+          "ooo_until": "2026-09-07",
+          "email": "jordan.hale@northstar.example",
+          "location": "San Francisco"
+        }
       },
       {
         "id": "emp-alex-rivera",
@@ -83,7 +124,15 @@
         "ooo": false,
         "x": 300,
         "y": 340,
-        "active": true
+        "active": true,
+        "facts": {
+          "role": "Junior Software Engineer",
+          "department": "Engineering",
+          "threshold_usd": 500,
+          "ooo_until": null,
+          "email": "alex.rivera@northstar.example",
+          "location": "San Francisco"
+        }
       },
       {
         "id": "vnd-figma",
@@ -93,7 +142,15 @@
         "ooo": false,
         "x": 520,
         "y": 430,
-        "active": true
+        "active": true,
+        "facts": {
+          "category": "design-tools",
+          "score": 94,
+          "soc2": true,
+          "incumbent": true,
+          "sla": "99.9% monthly uptime; P1 response 1h",
+          "notes": "Incumbent design system of record. Enterprise unlocks SSO + SCIM + branched libraries."
+        }
       },
       {
         "id": "vnd-adobe",
@@ -103,7 +160,15 @@
         "ooo": false,
         "x": 640,
         "y": 500,
-        "active": false
+        "active": false,
+        "facts": {
+          "category": "design-tools",
+          "score": 91,
+          "soc2": true,
+          "incumbent": false,
+          "sla": "99.9% uptime; P1 response 2h",
+          "notes": "Broader suite (Ps/Ai/Xd). Weak product-design collaboration vs Figma. Overlapping spend risk."
+        }
       },
       {
         "id": "vnd-sketch",
@@ -113,7 +178,15 @@
         "ooo": false,
         "x": 400,
         "y": 500,
-        "active": false
+        "active": false,
+        "facts": {
+          "category": "design-tools",
+          "score": 78,
+          "soc2": true,
+          "incumbent": false,
+          "sla": "99.5% uptime; P1 response 4h",
+          "notes": "macOS-only editor. Cheaper, but collaboration and FigJam-class workshops are weaker."
+        }
       },
       {
         "id": "vnd-penpot",
@@ -123,7 +196,15 @@
         "ooo": false,
         "x": 520,
         "y": 540,
-        "active": false
+        "active": false,
+        "facts": {
+          "category": "design-tools",
+          "score": 61,
+          "soc2": false,
+          "incumbent": false,
+          "sla": "Best-effort community SLA; enterprise self-host optional",
+          "notes": "Open-source alternative. Fails SOC2 gate for production design-system hosting."
+        }
       },
       {
         "id": "vnd-miro",
@@ -133,7 +214,15 @@
         "ooo": false,
         "x": 640,
         "y": 430,
-        "active": false
+        "active": false,
+        "facts": {
+          "category": "design-tools",
+          "score": 87,
+          "soc2": true,
+          "incumbent": false,
+          "sla": "99.9% uptime",
+          "notes": "Workshop/whiteboard competitor to FigJam. Does not replace Figma Dev Mode."
+        }
       },
       {
         "id": "pol-spend-10k",
@@ -143,7 +232,12 @@
         "ooo": false,
         "x": 820,
         "y": 300,
-        "active": false
+        "active": false,
+        "facts": {
+          "policy_id": "pol-spend-10k",
+          "threshold_usd": 10000,
+          "body": "# POL-FIN-014 \u2014 Software spend over $10,000  All software purchases with a first-year committed value **greater than $10,000 USD** require:  1. **IT SecReview** \u2014 completed by IT Security (owner: Nina Patel / Marcus Webb) before PO issuance. 2. **Legal sign-off** \u2014 DPA, liability cap, and data-processing addendum revie"
+        }
       },
       {
         "id": "pol-soc2",
@@ -153,7 +247,12 @@
         "ooo": false,
         "x": 820,
         "y": 380,
-        "active": false
+        "active": false,
+        "facts": {
+          "policy_id": "pol-soc2",
+          "threshold_usd": 0,
+          "body": "# POL-SEC-003 \u2014 Vendor SOC 2 Type II  Any vendor that will process, store, or view Northstar source code, designs, customer data, or employee PII **must** hold a current SOC 2 Type II report.  - ISO 27001 is accepted as a *supplement*, not a substitute. - Exceptions require CISO written waiver (Marcus Webb) and expire "
+        }
       },
       {
         "id": "pol-ooo-routing",
@@ -163,7 +262,12 @@
         "ooo": false,
         "x": 820,
         "y": 220,
-        "active": false
+        "active": false,
+        "facts": {
+          "policy_id": "pol-ooo-routing",
+          "threshold_usd": 0,
+          "body": "# POL-PPL-009 \u2014 Out-of-office approval skip  If the would-be approver has `out_of_office = true`, the procurement system **must not wait**. Route to the next person on the `REPORTS_TO` path who is in office and whose threshold covers the amount.  Skip-level routing is auditable. The OOO manager is informed, not asked t"
+        }
       },
       {
         "id": "pol-sso",
@@ -173,7 +277,12 @@
         "ooo": false,
         "x": 820,
         "y": 460,
-        "active": false
+        "active": false,
+        "facts": {
+          "policy_id": "pol-sso",
+          "threshold_usd": 0,
+          "body": "# POL-SEC-011 \u2014 SSO and SCIM for tools over 25 seats  Any SaaS used by more than 25 employees must support:  - SAML or OIDC SSO against Okta - SCIM 2.0 deprovisioning within 24 hours of Okta deactivation  Tiers that do not include SSO/SCIM are not eligible, even if cheaper."
+        }
       },
       {
         "id": "pol-legal-dpa",
@@ -183,7 +292,12 @@
         "ooo": false,
         "x": 820,
         "y": 540,
-        "active": false
+        "active": false,
+        "facts": {
+          "policy_id": "pol-legal-dpa",
+          "threshold_usd": 10000,
+          "body": "# POL-LGL-004 \u2014 Data processing addendum  Software over $10k that stores design files, source, or PII needs a signed DPA with:  - EU SCCs or UK IDTA as applicable - Subprocessor list - 72-hour breach notification - Liability cap no lower than 12 months of fees  Legal owner: Sophie Laurent."
+        }
       }
     ],
     "edges": [
@@ -291,9 +405,9 @@
       }
     ],
     "highlight": [
+      "emp-maya-chen",
       "emp-alex-rivera",
       "emp-jordan-hale",
-      "emp-maya-chen",
       "vnd-figma"
     ]
   },

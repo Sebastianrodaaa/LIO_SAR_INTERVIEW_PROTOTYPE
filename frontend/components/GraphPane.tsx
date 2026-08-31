@@ -61,7 +61,7 @@ export function GraphPane({
   } | null>(null);
 
   const visible = useMemo(() => {
-    if (!graph) return { nodes: [] as GraphNode[], edges: graph?.edges ?? [] };
+    if (!graph) return { nodes: [] as GraphNode[], edges: [] };
     const nodes = graph.nodes.filter((n) => kinds[n.kind] !== false);
     const ids = new Set(nodes.map((n) => n.id));
     const edges = graph.edges.filter((e) => ids.has(e.source) && ids.has(e.target));

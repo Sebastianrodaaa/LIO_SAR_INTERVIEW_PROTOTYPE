@@ -9,6 +9,7 @@ import type { GraphView, PipelineFile, StageId } from "@/lib/types";
 import type { AssistantTurn, TraceStep } from "@/lib/traces";
 import { ChatPane, welcomeItem, type ChatItem } from "./ChatPane";
 import { GraphPane } from "./GraphPane";
+import { WindowControls, useDesktopShell } from "./WindowControls";
 
 type RunState = "idle" | "running" | "awaiting" | "done" | "error";
 
@@ -30,6 +31,7 @@ export function Cockpit() {
   const [headline, setHeadline] = useState<Headline | null>(null);
   const [provider, setProvider] = useState("mock");
   const [footer, setFooter] = useState("One agent. Five hats. Files pass the baton.");
+  const desktop = useDesktopShell();
 
   useEffect(() => {
     getState()
@@ -269,14 +271,16 @@ export function Cockpit() {
     : "Purchase review";
 
   return (
-    <div className="flex h-screen items-stretch justify-center p-3">
-      <div className="flex h-full w-full max-w-[1440px] flex-col overflow-hidden rounded-[12px] bg-white/80 shadow-window">
-        <header className="material hairline flex h-[52px] shrink-0 items-center px-4">
-          <div className="flex w-[68px] items-center gap-2" aria-hidden>
-            <span className="h-3 w-3 rounded-full bg-[#FF5F57]" />
-            <span className="h-3 w-3 rounded-full bg-[#FEBC2E]" />
-            <span className="h-3 w-3 rounded-full bg-[#28C840]" />
-          </div>
+    <div className={desktop ? "flex h-screen" : "flex h-screen items-stretch justify-center p-3"}>
+      <div
+        className={
+          desktop
+            ? "flex h-full w-full flex-col overflow-hidden bg-white"
+            : "flex h-full w-full max-w-[1440px] flex-col overflow-hidden rounded-[12px] bg-white/80 shadow-window"
+        }
+      >
+        <header className="material hairline pywebview-drag-region drag-region flex h-[52px] shrink-0 items-center px-4">
+          <WindowControls />
           <div className="flex-1 text-center">
             <div className="text-[13px] font-semibold tracking-[-0.02em] text-apple-ink">Northstar</div>
             <div className="text-[11px] text-apple-muted">{amountLabel}</div>
@@ -290,7 +294,7 @@ export function Cockpit() {
               setFooter("One agent. Five hats. Files pass the baton.");
             }}
             aria-label="New chat"
-            className="rounded-[8px] bg-black/[0.05] p-1.5 text-apple-muted hover:text-apple-ink"
+            className="no-drag rounded-[8px] bg-black/[0.05] p-1.5 text-apple-muted hover:text-apple-ink"
           >
             <RotateCcw size={14} />
           </button>

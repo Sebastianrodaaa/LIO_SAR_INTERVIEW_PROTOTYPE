@@ -17,7 +17,8 @@ from typing import Any, Literal
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
+from fastapi.responses import FileResponse, StreamingResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from engine.graph_store import connect_store
@@ -94,6 +95,8 @@ origins = [
     os.getenv("FRONTEND_ORIGIN", "http://127.0.0.1:3000"),
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
 ]
 app.add_middleware(
     CORSMiddleware,
@@ -234,6 +237,36 @@ def state() -> dict[str, Any]:
         "last_request": LAST_REQUEST,
         "workspace": str(WORKSPACE),
     }
+
+
+def _mount_desktop_ui() -> None:
+    """Serve the exported cockpit from the same origin as the API."""
+    ui = ROOT / "frontend" / "out"
+    if not (ui / "index.html").exists():
+        return
+    next_static = ui / "_next"
+    if next_static.exists():
+        app.mount("/_next", StaticFiles(directory=str(next_static)), name="next-static")
+
+    @app.get("/")
+    def desktop_index() -> FileResponse:
+        return FileResponse(ui / "index.html")
+
+    @app.get("/{asset_path:path}")
+    def desktop_asset(asset_path: str) -> FileResponse:
+        target = (ui / asset_path).resolve()
+        root = ui.resolve()
+        if target != root and root not in target.parents:
+            raise HTTPException(404, "not found")
+        if target.is_file():
+            return FileResponse(target)
+        nested = ui / asset_path / "index.html"
+        if nested.is_file():
+            return FileResponse(nested)
+        raise HTTPException(404, "not found")
+
+
+_mount_desktop_ui()
 
 
 if __name__ == "__main__":

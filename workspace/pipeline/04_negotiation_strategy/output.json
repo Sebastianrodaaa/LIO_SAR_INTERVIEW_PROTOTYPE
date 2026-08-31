@@ -1,12 +1,12 @@
 {
-  "vendor_id": "vnd-figma",
-  "vendor_name": "Figma",
-  "target_tier": "Enterprise",
-  "list_price_usd": 15000.0,
-  "ask_price_usd": 13200.0,
+  "vendor_id": "vnd-penpot",
+  "vendor_name": "Penpot",
+  "target_tier": "Enterprise self-host",
+  "list_price_usd": 7200.0,
+  "ask_price_usd": 6336.0,
   "term_months": 24,
   "asks": [
-    "12% first-year discount from $15,000 list to $13,200.",
+    "12% first-year discount from $7,200 list to $6,336.",
     "24-month term with year-2 price hold.",
     "SSO/SCIM included (already in Enterprise) confirmed in writing.",
     "Quarterly SLA credits at 10% of monthly fee if uptime < 99.9%."
@@ -19,5 +19,5 @@
     "SOC 2 Type II report current within 12 months",
     "Existing contract FIG-ENT-2025 novation / expansion rather than net-new MSA if possible"
   ],
-  "summary": "Incumbent expansion. Ask is commercial, not a rip-and-replace. Figma Enterprise list is already the compliant tier; the negotiation is price, term, and paper."
+  "summary": "Incumbent expansion. Ask is commercial, not a rip-and-replace. Penpot Enterprise list is already the compliant tier; the negotiation is price, term, and paper."
 }

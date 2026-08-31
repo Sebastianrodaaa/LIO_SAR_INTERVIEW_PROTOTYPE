@@ -1,10 +1,19 @@
 import type { GraphView, Health, PipelineFile, StageId } from "./types";
 import type { TraceKind } from "./traces";
 
-export const API = process.env.NEXT_PUBLIC_API_URL ?? "http://127.0.0.1:8000";
+function apiBase(): string {
+  if (process.env.NEXT_PUBLIC_API_URL) return process.env.NEXT_PUBLIC_API_URL;
+  if (typeof window === "undefined") return "http://127.0.0.1:8000";
+  if (window.location.port === "3000") return "http://127.0.0.1:8000";
+  return "";
+}
+
+export function getApi(): string {
+  return apiBase();
+}
 
 export async function getHealth(): Promise<Health> {
-  const res = await fetch(`${API}/health`);
+  const res = await fetch(`${getApi()}/health`);
   if (!res.ok) throw new Error("backend offline");
   return res.json();
 }
@@ -15,7 +24,7 @@ export async function getState(): Promise<{
   files: PipelineFile[];
   last_request?: Record<string, unknown>;
 }> {
-  const res = await fetch(`${API}/state`);
+  const res = await fetch(`${getApi()}/state`);
   if (!res.ok) throw new Error("state failed");
   const data = await res.json();
   return {
@@ -151,7 +160,7 @@ export async function sendChat(
   gated: boolean,
   onEvent: (event: CycleEvent) => void,
 ): Promise<void> {
-  const res = await fetch(`${API}/chat`, {
+  const res = await fetch(`${getApi()}/chat`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message, gated }),
@@ -164,7 +173,7 @@ export async function continueCycle(
   fromStage: StageId,
   onEvent: (event: CycleEvent) => void,
 ): Promise<void> {
-  const res = await fetch(`${API}/continue-cycle`, {
+  const res = await fetch(`${getApi()}/continue-cycle`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({

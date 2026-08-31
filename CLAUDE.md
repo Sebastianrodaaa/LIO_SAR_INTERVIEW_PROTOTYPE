@@ -7,7 +7,7 @@ Method: [ICM](https://arxiv.org/abs/2603.16021). Flow: [Anthropic workflows](htt
 
 | Task | Path |
 |---|---|
-| Run demo | `python3 bootstrap.py` then `make backend` + `make frontend` |
+| Run demo | `python3 bootstrap.py` then `make app` (native window) |
 | Mock enterprise | `mock_data_generator.py` → `data/` |
 | ICM stages | `workspace/pipeline/` |
 | Graph seed | `graph_seed.py` |
