@@ -1,12 +1,12 @@
 {
   "category": "design-tools",
-  "primary_vendor_id": "vnd-penpot",
-  "primary_vendor_name": "Penpot",
-  "primary_tier": "Enterprise self-host",
-  "primary_annual_usd": 7200.0,
-  "alternative_vendor_id": "vnd-figma",
-  "alternative_vendor_name": "Figma",
-  "continuity_exemption": false,
+  "primary_vendor_id": "vnd-figma",
+  "primary_vendor_name": "Figma",
+  "primary_tier": "Enterprise",
+  "primary_annual_usd": 15000.0,
+  "alternative_vendor_id": "vnd-adobe",
+  "alternative_vendor_name": "Adobe",
+  "continuity_exemption": true,
   "scores": [
     {
       "vendor_id": "vnd-figma",
@@ -69,5 +69,5 @@
       "rationale": "Open-source alternative. Fails SOC2 gate for production design-system hosting."
     }
   ],
-  "summary": "Penpot was requested but is not eligible (SOC 2=False, score 61). Figma remains the documented compliant path."
+  "summary": "Figma is the recommended path. Adobe is the documented alternative."
 }
